@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: #eef0f4;
+  user-select: none;
 }
 
 /*by default, img element display is inline*/
@@ -11,6 +12,7 @@ body {
 browser keeps equal margin in both side of the element */
 .container {
   display: flex;
+  
   flex-direction: column;
   max-width: 320px;
   margin: 20px auto; /*it is making the container in the center*/
@@ -29,6 +31,7 @@ input {
   border-radius: 8px;
   font-size: 20px;
   text-align: center;
+  margin:10px 0;
 }
 button {
   color: #fdfdfd;
@@ -38,4 +41,39 @@ button {
   border-radius: 8px;
   font-size: 20px;
   text-align: center;
+  transition: background-color 0.3s ease; 
+}
+button:hover {
+   background-color: #3b9766; /* Change background color on hover */
+   cursor: pointer;
+}
+button:active {
+  background-color: #50c97b; /* Change background color when button is clicked */
+  transform: translateY(1px); /* Move the button down slightly when clicked */
+}
+ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+}
+ul li{
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+  flex-grow: 1;/*this streches item till the end of the right side */
+  text-align: center;
+  font-size: 20px;
+  
+
+}
+ul li:hover{
+   background-color: rgb(183, 249, 172);
+   cursor: pointer;
+}
+ul li:active {
+ 
+  transform: translateY(1px); /* Move the li down slightly when clicked */
 }
